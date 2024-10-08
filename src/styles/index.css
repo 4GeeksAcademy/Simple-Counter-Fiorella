@@ -10,3 +10,12 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+  
+  .violet-background {
+    background-color: purple; 
+  }
+  
+  .white-text {
+    color: white; 
+  } ;
