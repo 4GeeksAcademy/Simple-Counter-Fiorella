@@ -1,13 +1,23 @@
-//import react into the bundle
+// Importa React en el proyecto
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// include your styles into the webpack bundle
+// Incluye tus estilos en el bundle de webpack
 import "../styles/index.css";
 
-//import your own components
-import Home from "./component/home.jsx";
 
-//render your react application
-ReactDOM.createRoot(document.getElementById('app')).render(<Home/>);
+import SecondsCounter from "./component/SecondsCounter.jsx";
 
+
+let time = 0;
+
+// se usa el "time" para que se actualice
+
+const app = ReactDOM.createRoot(document.getElementById("app"));
+app.render(<SecondsCounter seconds={time} />);
+
+// Actualiza el componente 
+setInterval(() => {
+    time++;
+    app.render(<SecondsCounter seconds={time} />);
+}, 1000);
