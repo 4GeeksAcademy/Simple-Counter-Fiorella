@@ -1,3 +1,4 @@
+// SimpleCounter.jsx
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
@@ -6,7 +7,7 @@ import { faClock } from "@fortawesome/free-regular-svg-icons";
 const Digitos = (props) => {
   return (
     <div className="d-flex">
-      <div className="card violet-background mb-3">
+      <div className="card pink-background mb-3">
         <div className="card-body">
           <h5 className="card-title white-text">{props.seconds}</h5>
         </div>
@@ -15,7 +16,7 @@ const Digitos = (props) => {
   );
 };
 
-// Componente principal que representa el contador
+// Componente principal que renderiza el contador
 const SecondsCounter = (props) => {
   return (
     <div className="d-flex">
